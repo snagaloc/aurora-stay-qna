@@ -125,13 +125,13 @@ if st.button("Submit", type="primary"):
                 if response_type == "Answer only":
 
                     st.subheader("Answer")
-                    st.write(result["answer"])
+                    st.write(result["answer"].replace("$", "\\$"))
 
                 # -- Answer + Relevant Chunks -------------------
                 else:
 
                     st.subheader("Answer")
-                    st.write(result["answer"])
+                    st.write(result["answer"].replace("$", "\\$"))
 
                     st.subheader("Relevant Chunks")
                     for i, chunk in enumerate(result["relevant_chunks"], start=1):
